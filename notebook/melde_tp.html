@@ -1,0 +1,390 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2. Travaux pratiques &#8212; TP Ondes</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.c441f2ba0852f4cabcb80105e3a46ae6.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/tp6_ondes/notebook/melde_tp.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1. Préliminaires" href="cuve_preliminaire.html" />
+    <link rel="prev" title="1. Préliminaires" href="melde_preliminaire.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://pcsi3physiquestan.github.io/tp6_ondes/notebook/melde_tp.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Travaux pratiques" />
+<meta property="og:description" content="Travaux pratiques  Le but de ce TP est de mettre en place un dispositif créant un phénomène d’onde stationnaire sur une corde tendue. On observera et discutera " />
+
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">TP Ondes</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tp6_ondes.html">
+   Mécanique et thermodynamique
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Corde de Melde
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="melde_preliminaire.html">
+   1. Préliminaires
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. Travaux pratiques
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Cuve à ondes
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="cuve_preliminaire.html">
+   1. Préliminaires
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cuve_tp.html">
+   2. Travaux pratiques
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Ultrasons
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ondes_tp.html">
+   1. Travaux pratiques
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Intérférences
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="interferences_preliminaire.html">
+   1. Préliminaires
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="interferences_tp.html">
+   2. Travaux pratiques
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <a href="https://www.cedriclacpatia.fr">Site de la classe</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/melde_tp.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/melde_tp.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/melde_tp.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#observation-d-une-onde-stationnaire">
+   2.1. Observation d’une onde stationnaire
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modes-propres-des-ondes-stationnaires">
+   2.2. Modes propres des ondes stationnaires.
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="travaux-pratiques">
+<h1><span class="section-number">2. </span>Travaux pratiques<a class="headerlink" href="#travaux-pratiques" title="Permalink to this headline">¶</a></h1>
+<p>Le but de ce TP est de mettre en place un dispositif créant un phénomène d’onde stationnaire sur une corde tendue. On observera et discutera ainsi la discrétisation attendue des fréquences qui occasionnent une amplitude de vibration importante. Il sera observé aussi le phénomène à proprement parlé d’onde stationnaire en observation le caractère fixe des ventres et des noeuds.</p>
+<div class="section" id="observation-d-une-onde-stationnaire">
+<h2><span class="section-number">2.1. </span>Observation d’une onde stationnaire<a class="headerlink" href="#observation-d-une-onde-stationnaire" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Mise en place</p>
+<ol class="simple">
+<li><p>Mesurer la longueur totale de la corde et la peser. En déduire la masse linéique <span class="math notranslate nohighlight">\(\mu\)</span> de la corde.</p></li>
+<li><p>Mesurer une longueur de corde d’environ 85cm à partir d’une extrémité et attacher une masse de <span class="math notranslate nohighlight">\(m=150\rm{g}\)</span>. Fixer l’autre extrémité au vibreur. Fixer le vibreur sur son support et placer le support avec tige à une distance <span class="math notranslate nohighlight">\(l\approx 80\rm{cm}\)</span> (mesurer précisément la longueur de corde tendue). Régler la hauteur du montage pour que la corde soit horizontale.</p></li>
+<li><p>On peut alors rebrancher l’amplificateur au vibreur.</p></li>
+</ol>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Le mode de fonctionnement de la corde est étudié dans un cadre d’oscillations de petites amplitudes. C’est pourquoi, on limitera l’amplitude des oscillations en diminuant l’amplitude de la tension du GBF si nécessaire. L’idéal est de ne pas dépasser 1cm/1,5cm d’amplitude de vibration</p>
+<p>Il y a un moyen de vérifier que l’amplitude est correcte : <strong>si la corde tourne, il faut la diminuer l’amplitude.</strong></p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Etude d’une onde stationnaire</p>
+<ol class="simple">
+<li><p>Exciter le vibreur avec une tension sinusoïdale de 40Hz, puis diminuer la fréquence de vibration jusqu’à observer un maximum d’amplitude de vibration de la corde (on parle de phénomène de résonance).</p></li>
+<li><p>Proposer une méthode simple permettant de vérifier que la corde vibre bien à 40Hz grâce au stroboscope. Le vérifier. La méthode doit permettre d’observer que l’onde est stationnaire, repérer la position des ventres et des noeuds.</p></li>
+<li><p>Réaliser l’expérience et déterminer la fréquence de vibration de la corde et les positions des noeuds et des ventres.</p></li>
+</ol>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Célérité des ondes mécaniques</p>
+<ol class="simple">
+<li><p>Proposer une méthode de mesure de la célérité des ondes progressives à la fréquence fixée en utilisant la relation de dispersion.</p></li>
+<li><p>Comparer à la valeur attendue: <span class="math notranslate nohighlight">\(c= \sqrt{\frac{mg}{\mu}}\)</span> où g est l’intensité de la pesanteur <span class="math notranslate nohighlight">\(g=9,81m.s^{-2}\)</span>.  (<span class="math notranslate nohighlight">\(m\)</span> est la masse suspendue)</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="modes-propres-des-ondes-stationnaires">
+<h2><span class="section-number">2.2. </span>Modes propres des ondes stationnaires.<a class="headerlink" href="#modes-propres-des-ondes-stationnaires" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Détermination des modes propres de la corde vibrante</p>
+<p>On estime, dans les conditions expérimentales proposées, la fréquence du fondamental supérieur à 15Hz.</p>
+<ol class="simple">
+<li><p>Proposer un protocole expérimental permettant de déterminer les fréquences des modes propres en commençant par le fondamental <span class="math notranslate nohighlight">\(f_0\)</span> ainsi que les longueurs d’onde pour chaque mode.</p></li>
+<li><p>Réaliser l’expérience pour déterminer des fréquences (autant qu’on peut) ET les longueurs d’onde des signaux pour ces fréquences.</p></li>
+<li><p>Quand la fréquence devient nettement supérieure à 20Hz, que ``ressent’’-on? Commenter.</p></li>
+</ol>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Longueur effective de la corde</p>
+<p>Les études théoriques habituelles d’une corde vibrante prévoit la présence de 2 noeuds aux extrémités (ou 2 ventres, ou 1 ventre+1 noeud). Dans ces conditions (cf. cours), on attend une relation entre la longueur de la corde et les longueurs d’onde des signaux: <span class="math notranslate nohighlight">\(l=n \frac{\lambda}{2}\)</span></p>
+<ol class="simple">
+<li><p>Les mesures effectuées précédemment sont-elles cohérentes avec la présence de 2 noeuds aux extrémités?</p></li>
+<li><p>Dans le cas général, on peut exprimer une longueur effective de corde <span class="math notranslate nohighlight">\(l_{eff}\)</span> qui correspond à la longueur qu’aurait une corde vibrante présentant les mêmes modes propres en longueur d’onde mais avec deux noeuds à ses extrémités. Proposer une représentation graphique simple permettant de déterminer au moyen d’une régression linéaire la longueur effective de cette corde vibrante. Réaliser la représentation graphique et la régression linéaire à l’aide d’un tableur.</p></li>
+</ol>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="melde_preliminaire.html" title="previous page"><span class="section-number">1. </span>Préliminaires</a>
+    <a class='right-next' id="next-link" href="cuve_preliminaire.html" title="next page"><span class="section-number">1. </span>Préliminaires</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
