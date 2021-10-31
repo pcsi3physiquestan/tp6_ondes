@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2. Travaux pratiques &#8212; TP Ondes</title>
+    <title>6. Polyfit avec la propagation des variances &#8212; TP Ondes</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,11 +51,11 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <link rel="canonical" href="https://pcsi3physiquestan.github.io/tp6_ondes/notebook/melde_tp.html" />
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/tp6_ondes/notebook/ondes_annexe.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3. Préliminaires" href="cuve_preliminaire.html" />
-    <link rel="prev" title="1. Préliminaires" href="melde_preliminaire.html" />
+    <link rel="next" title="7. Préliminaires" href="interferences_preliminaire.html" />
+    <link rel="prev" title="5. Travaux pratiques" href="ondes_tp.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -95,14 +95,14 @@
   Corde de Melde
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="melde_preliminaire.html">
    1. Préliminaires
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="melde_tp.html">
    2. Travaux pratiques
   </a>
  </li>
@@ -129,14 +129,14 @@
   Ultrasons
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="ondes_tp.html">
    5. Travaux pratiques
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="ondes_annexe.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    6. Polyfit avec la propagation des variances
   </a>
  </li>
@@ -197,11 +197,11 @@
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         <a class="dropdown-buttons"
-            href="../_sources/notebook/melde_tp.ipynb"><button type="button"
+            href="../_sources/notebook/ondes_annexe.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/notebook/melde_tp.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/notebook/ondes_annexe.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -226,7 +226,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/melde_tp.md"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/ondes_annexe.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -243,24 +243,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#observation-d-une-onde-stationnaire">
-   2.1. Observation d’une onde stationnaire
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#modes-propres-des-ondes-stationnaires">
-   2.2. Modes propres des ondes stationnaires.
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -269,59 +251,22 @@
         
               <div>
                 
-  <div class="section" id="travaux-pratiques">
-<h1><span class="section-number">2. </span>Travaux pratiques<a class="headerlink" href="#travaux-pratiques" title="Permalink to this headline">¶</a></h1>
-<p>Le but de ce TP est de mettre en place un dispositif créant un phénomène d’onde stationnaire sur une corde tendue. On observera et discutera ainsi la discrétisation attendue des fréquences qui occasionnent une amplitude de vibration importante. Il sera observé aussi le phénomène à proprement parlé d’onde stationnaire en observation le caractère fixe des ventres et des noeuds.</p>
-<div class="section" id="observation-d-une-onde-stationnaire">
-<h2><span class="section-number">2.1. </span>Observation d’une onde stationnaire<a class="headerlink" href="#observation-d-une-onde-stationnaire" title="Permalink to this headline">¶</a></h2>
-<div class="tip admonition">
-<p class="admonition-title">Mise en place</p>
-<ol class="simple">
-<li><p>Mesurer la longueur totale de la corde et la peser. En déduire la masse linéique <span class="math notranslate nohighlight">\(\mu\)</span> de la corde.</p></li>
-<li><p>Mesurer une longueur de corde d’environ 85cm à partir d’une extrémité et attacher une masse de <span class="math notranslate nohighlight">\(m=150\rm{g}\)</span>. Fixer l’autre extrémité au vibreur. Fixer le vibreur sur son support et placer le support avec tige à une distance <span class="math notranslate nohighlight">\(l\approx 80\rm{cm}\)</span> (mesurer précisément la longueur de corde tendue). Régler la hauteur du montage pour que la corde soit horizontale.</p></li>
-<li><p>On peut alors rebrancher l’amplificateur au vibreur.</p></li>
-</ol>
+  <div class="section" id="polyfit-avec-la-propagation-des-variances">
+<span id="polyfit-variance"></span><h1><span class="section-number">6. </span>Polyfit avec la propagation des variances<a class="headerlink" href="#polyfit-avec-la-propagation-des-variances" title="Permalink to this headline">¶</a></h1>
+<p>Il n’est pas nécessaire de réaliser un calcul supplémentaire pour estimer l’incertitude-type de la pente et de l’ordonnée à l’origine car la fonction offre la possibilité de le faire.</p>
+<p>On utilise la signature :</p>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="n">pars</span><span class="p">,</span> <span class="n">V</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">cov</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
 </div>
+<p><code class="docutils literal notranslate"><span class="pre">V</span></code> est alors une matrice numpy. L’intertitude-type sur la pente s’obtient alors par <span class="math notranslate nohighlight">\(u(Y) \times \sqrt{V[0][0]}\)</span> et l’intertitude-type sur l’ordonnée à l’origine s’obtient alors par <span class="math notranslate nohighlight">\(u(Y) \times \sqrt{V[1][1]}\)</span>.</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>Le mode de fonctionnement de la corde est étudié dans un cadre d’oscillations de petites amplitudes. C’est pourquoi, on limitera l’amplitude des oscillations en diminuant l’amplitude de la tension du GBF si nécessaire. L’idéal est de ne pas dépasser 1cm/1,5cm d’amplitude de vibration</p>
-<p>Il y a un moyen de vérifier que l’amplitude est correcte : <strong>si la corde tourne, il faut la diminuer l’amplitude.</strong></p>
-</div>
-<div class="tip admonition">
-<p class="admonition-title">Etude d’une onde stationnaire</p>
-<ol class="simple">
-<li><p>Exciter le vibreur avec une tension sinusoïdale de 40Hz, puis diminuer la fréquence de vibration jusqu’à observer un maximum d’amplitude de vibration de la corde (on parle de phénomène de résonance).</p></li>
-<li><p>Proposer une méthode simple permettant de vérifier que la corde vibre bien à 40Hz grâce au stroboscope. Le vérifier. La méthode doit permettre d’observer que l’onde est stationnaire, repérer la position des ventres et des noeuds.</p></li>
-<li><p>Réaliser l’expérience et déterminer la fréquence de vibration de la corde et les positions des noeuds et des ventres.</p></li>
-</ol>
-</div>
-<div class="tip admonition">
-<p class="admonition-title">Célérité des ondes mécaniques</p>
-<ol class="simple">
-<li><p>Proposer une méthode de mesure de la célérité des ondes progressives à la fréquence fixée en utilisant la relation de dispersion.</p></li>
-<li><p>Comparer à la valeur attendue: <span class="math notranslate nohighlight">\(c= \sqrt{\frac{mg}{\mu}}\)</span> où g est l’intensité de la pesanteur <span class="math notranslate nohighlight">\(g=9,81m.s^{-2}\)</span>.  (<span class="math notranslate nohighlight">\(m\)</span> est la masse suspendue)</p></li>
-</ol>
-</div>
-</div>
-<div class="section" id="modes-propres-des-ondes-stationnaires">
-<h2><span class="section-number">2.2. </span>Modes propres des ondes stationnaires.<a class="headerlink" href="#modes-propres-des-ondes-stationnaires" title="Permalink to this headline">¶</a></h2>
-<div class="tip admonition">
-<p class="admonition-title">Détermination des modes propres de la corde vibrante</p>
-<p>On estime, dans les conditions expérimentales proposées, la fréquence du fondamental supérieur à 15Hz.</p>
-<ol class="simple">
-<li><p>Proposer un protocole expérimental permettant de déterminer les fréquences des modes propres en commençant par le fondamental <span class="math notranslate nohighlight">\(f_0\)</span> ainsi que les longueurs d’onde pour chaque mode.</p></li>
-<li><p>Réaliser l’expérience pour déterminer des fréquences (autant qu’on peut) ET les longueurs d’onde des signaux pour ces fréquences.</p></li>
-<li><p>Quand la fréquence devient nettement supérieure à 20Hz, que ``ressent’’-on? Commenter.</p></li>
-</ol>
-</div>
-<div class="tip admonition">
-<p class="admonition-title">Longueur effective de la corde</p>
-<p>Les études théoriques habituelles d’une corde vibrante prévoit la présence de 2 noeuds aux extrémités (ou 2 ventres, ou 1 ventre+1 noeud). Dans ces conditions (cf. cours), on attend une relation entre la longueur de la corde et les longueurs d’onde des signaux: <span class="math notranslate nohighlight">\(l=n \frac{\lambda}{2}\)</span></p>
-<ol class="simple">
-<li><p>Les mesures effectuées précédemment sont-elles cohérentes avec la présence de 2 noeuds aux extrémités?</p></li>
-<li><p>Dans le cas général, on peut exprimer une longueur effective de corde <span class="math notranslate nohighlight">\(l_{eff}\)</span> qui correspond à la longueur qu’aurait une corde vibrante présentant les mêmes modes propres en longueur d’onde mais avec deux noeuds à ses extrémités. Proposer une représentation graphique simple permettant de déterminer au moyen d’une régression linéaire la longueur effective de cette corde vibrante. Réaliser la représentation graphique et la régression linéaire à l’aide d’un tableur.</p></li>
-</ol>
-</div>
+<p>Cette méthode a l’air simple MAIS :</p>
+<ul class="simple">
+<li><p>elle n’est pas au programme, celle que vous devez connaître est la méthode de Monte-Carlo. On l’utilise ici simplement pour montrer comment on ferait avec la propagation des variances</p></li>
+<li><p>elle est imprécise car elle suppose que <span class="math notranslate nohighlight">\(u(Y)\)</span> est le même pour chaque mesure (il faudra prendre une moyenne) et ne tient pas compte des incertitudes sur les abscisses. La multiplication par <span class="math notranslate nohighlight">\(u(Y)\)</span> est n’est d’ailleurs pas forcémentr valable suivant les cas.</p></li>
+</ul>
+<p>Il est donc important de maitriser la méthode de Monte-Carlo pour obtenir l’incertitude après régression linéaire.</p>
 </div>
 </div>
 
@@ -350,8 +295,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="melde_preliminaire.html" title="previous page"><span class="section-number">1. </span>Préliminaires</a>
-    <a class='right-next' id="next-link" href="cuve_preliminaire.html" title="next page"><span class="section-number">3. </span>Préliminaires</a>
+    <a class='left-prev' id="prev-link" href="ondes_tp.html" title="previous page"><span class="section-number">5. </span>Travaux pratiques</a>
+    <a class='right-next' id="next-link" href="interferences_preliminaire.html" title="next page"><span class="section-number">7. </span>Préliminaires</a>
 
         </div>
         
